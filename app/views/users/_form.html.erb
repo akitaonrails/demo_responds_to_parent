@@ -1,0 +1,18 @@
+<% form_for(user, :html => { :target => "hiddenForm", :multipart => true }) do |f| %>
+  <p>
+    <%= f.label :login %><br />
+    <%= f.text_field :login %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :avatar %><br />
+    <%= f.file_field :avatar %>
+  </p>
+  <p>
+    <%= f.submit label %>
+  </p>
+<% end %>
+<iframe id="hiddenForm" name="hiddenForm" style="display:none" />

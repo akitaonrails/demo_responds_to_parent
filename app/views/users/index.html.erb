@@ -1,0 +1,16 @@
+<h1>Listing users</h1>
+
+<div id="errorExplanation" style="display:none"></div>
+
+<table id="users">
+  <tr>
+    <th>Login</th>
+    <th>Name</th>
+  </tr>
+
+  <%= render @users %>
+</table>
+
+<br />
+
+<%= link_to 'New user', new_user_path, :onclick => "javascript: Modalbox.show(this.href, {title: this.title, width: 500}); return false;", :title => "New User" %>

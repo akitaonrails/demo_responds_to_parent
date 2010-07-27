@@ -1,0 +1,16 @@
+== Example using Responds To Parent and Paperclip
+
+The problem: you are using an Ajax based dialog box. So you want to POST the
+form back using Ajax but you can't because it is a multipart form with 
+image uploading.
+
+So you need to POST to a target hidden IFRAME. Problem is, the Javascript
+that will come back will run inside the IFRAME.
+
+Solution: using the responds_to_parent plugin, it will trap the returning
+Javascript so it is executed in the parent window.
+
+== Links:
+
+Responds to Parent: http://github.com/markcatley/responds_to_parent
+ModalBox: http://github.com/okonet/modalbox

@@ -1,0 +1,10 @@
+<% if @user.errors.empty? -%>
+  Element.replace("<%= dom_id(@user) %>", "<%= escape_javascript(render(@user)) %>");
+  new Effect.Highlight("<%= dom_id(@user) %>", { duration: 5 });
+  new Effect.Pulsate("<%= dom_id(@user) %>", { duration: 5, pulses: 5 });
+<% else -%>
+  Element.replace("errorExplanation", "<%= escape_javascript(error_messages_for('user')) %>");
+  setTimeout("new Effect.Squish('errorExplanation')", 4000);
+<% end -%>
+Modalbox.hide();
+

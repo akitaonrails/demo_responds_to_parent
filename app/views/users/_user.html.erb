@@ -1,0 +1,7 @@
+<tr id="<%= dom_id(user) %>">
+  <td><%=h user.login %></td>
+  <td><%=h user.name %></td>
+  <td><%= link_to 'Show', user %></td>
+  <td><%= link_to 'Edit', edit_user_path(user), :onclick => "javascript: Modalbox.show(this.href, {title: this.title, width: 500}); return false;", :title => "Edit User" %></td>
+  <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>

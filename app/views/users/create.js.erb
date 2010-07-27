@@ -1,0 +1,7 @@
+<% if @user.errors.empty? -%>
+  Element.insert("users", "<%= escape_javascript(render(@user)) %>");
+<% else -%>
+  Element.replace("errorExplanation", "<%= escape_javascript(error_messages_for('user')) %>");
+  setTimeout("Effect.Squish('errorExplanation')", 4000);
+<% end -%>
+Modalbox.hide();
